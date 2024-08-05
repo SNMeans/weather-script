@@ -29,3 +29,6 @@ if ($weather -match "rain") {
 
 
 Write-Host "Currently, the weather for $zipcode is $description with a temperature of $temperature degrees Fahrenheit. Have an amazing day!!!" -ForegroundColor $color
+} catch {
+    Write-Host "Failed to retrieve weather data. Please check your internet connection and API key." -ForegroundColor Red
+}
